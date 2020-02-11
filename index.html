@@ -10,24 +10,36 @@
 </head>
 
 <body>
-    <div id="container">
+    <section id="container">
         <header>
             <h1>Coding Quiz Challenge</h1>
         </header>
         <section class="card">
-            <header class="card header">
-                <div class="viewHighlights"><a href="#"> View Highlights</a></div>
-                <div class="timer"><strong>Time :</strong> <span id="timeCount">1:00</span></div>
-                <div class="question">
+            <section class="card header">
+                <aside class="viewHighlights"><a href="#"> View Highlights</a></aside>
+                <aside class="timer"><strong>Time :</strong> <span id="timeCount">1:00</span></aside>
+            </section>
+            <article class="card body">
+                <section id="start quiz">
                     <p>Try to answer the following Fast and Furios-related questions with the time limit.Keep in mind
                         thast
                         incorrect answers will penalize your scoretime by ten seconds.</p>
                     <p class="center-btn"><button id=start class="btn">Start Quiz</button></p>
-                </div>
-            </header>
-
+                    <button id = "next" clas ></button>
+                </section>
+                <article id= "questions" style="display : none">
+                </article>
+                <section class="choices"style="display : none">
+                    <button id="A" class="choiceA" value="1"><span>A</span></button>
+                    <button id="B" class="choiceB" value="1"><span>B</span></button>
+                    <button id="C" class="choiceC" value="1"><span>C</span></button>
+                    <button id="D" class="choiceD" value="1"><span>D</span></button>
+                </section>
+               <aside id=countdown>
+               </aside>
+            </article>
         </section>
-    </div>
+    </section>
     <script src="./script.js"></script>
 </body>
 

@@ -1,58 +1,79 @@
     //Assign Code
-       var generateBtn = document.getElementById("start")
-       
-      
+       var generateBtn = document.getElementById("start");
+        var startQuiz=document.getElementById("start quiz");
+        var questions = document.getElementById("questions");
 
+        var choice0 = document.getElementById("A");
+        var choice1 = document.getElementById("B");
+        var choice2 = document.getElementById("C");
+        var choice3 = document.getElementById("D");
+
+        var timer = document.getElementById("countdown");
+        
+
+       document.getElementById("start").addEventListener("click", function() {
+          //console.log("start");
+      });
         // We start the game with a score of 0
-      var score = 0;
+        var score = 0;
+        questions[0].question
+        question[0].choiceA
+        question[0].choiceB
+        question[0].choiceC
+        question[0].choiceA 
+        question[0].correct 
 
-         var questions = [
-         {  q: " Who said, Ask any racer, any real racer,it doesn't matter if you win by an inch or a mile, winning is winning?", 
+        function start (){
+          var questions =[
+         {  question: " Who said, Ask any racer, any real racer,it doesn't matter if you win by an inch or a mile, winning is winning?", 
             a:"Dom" ,
-            c1:"Vince",
-            c2:"Leon",
-            c3:"Hector",
-            c4:"Dom"
-            //console.log("answer");
+            choiceA:"Vince",
+            choiceB:"Leon",
+            choiceC:"Hector",
+            choiceD:"Dom"     
       },
-        { q: "Who drove the orange lamborghini mercielago on the ice?",
+        {    question: "Who drove the orange lamborghini mercielago on the ice?",
              a:"Tyrese",
-             c1:"The Rock" ,
-             c2:"Jason Statham",
-             c3:"VIn Disel",
-             c4:"Tyrese"
+             choiceA:"The Rock" ,
+             choiceB:"Jason Statham",
+             choiceC:"VIn Disel",
+             choiceD:"Tyrese"
      },
-        { q: "What is the beer of choice in the movie?",
+        { question: "What is the beer of choice in the movie?",
              a: "corona" ,
-             c1:"Budweiser",
-             c2:"Corona",
-             c3:"Blue Moon",
-             c4:"Coors Light"
+             choiceA:"Budweiser",
+             choiceB:"Corona",
+             choiceC:"Blue Moon",
+             choiceD:"Coors Light"
     },
-        { q: "What was the car of choice for Dom", 
+        { question: "What was the car of choice for Dom", 
              a: "Dodge Charger",
-             c1:"Dodge Charger",
-             c2:"Mustang gt350",
-             c3:"Toyota Supra",
-             c4:"Honda civi Si" 
+             choiceA:"Dodge Charger",
+             choiceB:"Mustang gt350",
+             choiceC:"Toyota Supra",
+             choiceD:"Honda civi Si" 
     },
-        {  q: "What is Brian's true profession?.",
+        {  question: "What is Brian's true profession?.",
             a: "cop" ,
-            c1:"chef",
-            c2:"accountant",
-            c3:"mechanic",
-            c4:"cop" 
+            choiceA:"chef",
+            choiceB:"accountant",
+            choiceC:"mechanic",
+            choiceD:"cop" 
     },
     
 ];
+
+ 
+    start()
+
     //loop each question
     for(var i = 0; i < questions.length; i++){
-        //var response = prompt(questions[i].q);
+        var response = (questions[i].q);
       if(response == questions[i].answer ){}
     }
    // Compare answers
-    if ((answer === true && questions[i].a === "t") ||
-     (answer === false && questions[i].a === "f")) {
+    if ((response === true && questions[i].a === "t") ||
+     (response === false && questions[i].a === "t")) {
          // Increase score
       score++;
     alert("Correct!");
@@ -61,7 +82,8 @@
      alert("Wrong!");
  }
      
-      
+
+}
 
 
        
