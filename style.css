@@ -42,14 +42,20 @@ p  {
 .card-body{
     height: 300px;
 }
-
-button.btn{
+/* .btn{
+    font-family: "Courier New", Courier, monospace;
+    font-weight: 800;
+} */
+.btn{
     background-color: mediumvioletred;
     height:30px;
     width: 100px;
     cursor: pointer;
     display: inline-block;
     margin: 0 auto;
+}
+.hide{
+    display: none;
 }
 .center-btn {
     text-align: center;

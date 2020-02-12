@@ -1,27 +1,27 @@
 //Assign Code
-var startQuiz = document.getElementById("start");
-//  var startQuiz=document.getElementById("start quiz");
-var questions = document.getElementById("questions");
+let startBtn = document.getElementById("start");
+//  let startQuiz=document.getElementById("start quiz");
+let questionElement = document.getElementById("questions");
 
-var choice0 = document.getElementById("choiceA");
-var choice1 = document.getElementById("choiceB");
-var choice2 = document.getElementById("choiceC");
-var choice3 = document.getElementById("choiceD");
+let choice0 = document.getElementById("choiceA");
+let choice1 = document.getElementById("choiceB");
+let choice2 = document.getElementById("choiceC");
+let choice3 = document.getElementById("choiceD");
 
-var timer = document.getElementById("countdown");
+let timer = document.getElementById("countdown");
 
 //startQuiz.addEventListener("click", start);
 
 
-var startQuiz = document.getElementById("start");
-startQuiz.addEventListener("click", start);
+// startBtn.addEventListener("click", function(event){console.log(event)});
+startBtn.addEventListener("click", startQuiz);
 function startQuiz() {
     console.log("see if start works");
-    startQuiz.classList.add("hide")
+    startBtn.classList.add("hide")
 }
 
 // We start the game with a score of 0
-var score = 0;
+let score = 0;
 // question[0].questions
 // question[0].choiceA
 // question[0].choiceB
@@ -31,7 +31,7 @@ var score = 0;
 
 //console.log("started")
 //array for all questions
-var questions = [
+let questions = [
     {
         question: " Who said, Ask any racer, any real racer,it doesn't matter if you win by an inch or a mile, winning is winning?",
         a:[3],
@@ -81,24 +81,24 @@ function showQuestion() {
 
 
 
-//loop each question
-for (var i = 0; i < questions.length; i++) {
-    var response = (questions[i].q);
-    if (response == questions[i].answer) { }
-}
-// Compare answers
-if ((response === true && questions[i].a === "t") ||
-    (response === false && questions[i].a === "t")) {
-    // Increase score
-    score++;
-    alert("Correct!");
-}
-else {
-    alert("Wrong!");
-}
+// //loop each question
+// for (let i = 0; i < questions.length; i++) {
+//     let response = (questions[i].q);
+//     if (response == questions[i].answer) { }
+// }
+// // Compare answers
+// if ((response === true && questions[i].a === "t") ||
+//     (response === false && questions[i].a === "t")) {
+//     // Increase score
+//     score++;
+//     alert("Correct!");
+// }
+// else {
+//     alert("Wrong!");
+// }
 
-var var1 = [];
-var var2 = JSON.parse(localStorage.getItem("score"));
+let var1 = [];
+let var2 = JSON.parse(localStorage.getItem("score"));
 if (var2 !== null) {
     var1 = var2;
 }
