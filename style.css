@@ -5,7 +5,7 @@ body    {
    
 }
 
-#container{
+.container{
     background-color:lightblue;
     /* padding: 20px;
     margin: 40px;
@@ -50,9 +50,7 @@ button.btn{
     cursor: pointer;
     display: inline-block;
     margin: 0 auto;
-    
 }
-
 .center-btn {
     text-align: center;
 }
