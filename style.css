@@ -33,10 +33,13 @@ h1  {
     text-align: center;
     
 }
-p  {
+p{
     font-family: 'Times New Roman', Times, serif;
     font-size: 15px;
     padding: 40px;
+}
+.note{
+    display:none;
 }
  
 .card-body{
@@ -60,6 +63,44 @@ p  {
 .center-btn {
     text-align: center;
 }
+.btn-grid{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 30px;    
+    margin: 10px;
+}
+ #A{
+   background-color: white;
+   height:30px;
+   width: 150px;
+   cursor: pointer;
+   display: inline-block;
+   margin: 0 auto; 
+}
+#B{
+    background-color: white;
+    height:30px;
+    width: 150px;
+     cursor: pointer;
+     display: block;
+     margin: 0 auto;
+ }
+ #C{
+    background-color: white;
+    height:30px;
+    width: 150px;
+     cursor: pointer;
+     display: inline-block;
+     margin: 0 auto;
+ }
+ #D{
+    background-color: white;
+    height:30px;
+    width: 150px;
+     cursor: pointer;
+     display: block;
+     margin: 0 auto;
+ } 
 
 .viewHighlights {
     float: left;

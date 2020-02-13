@@ -1,107 +1,182 @@
 //Assign Code
+let questions = [
+    {
+        question: " Who said, Ask any racer, any real racer,it doesn't matter if you win by an inch or a mile, winning is winning?",
+        choiceA: "Vince",
+        choiceB: "Leon",
+        choiceC: "Hector",
+        choiceD: "Dom",
+        answer:3
+    },
+    {
+        question: "Who drove the orange lamborghini mercielago on the ice?",
+        
+        choiceA: "The Rock",
+        choiceB: "Jason Statham",
+        choiceC: "VIn Disel",
+        choiceD: "Tyrese",
+        answer:3
+    },
+    {
+        question: "What is the beer of choice in the movie?",
+        choiceA: "Budweiser",
+        choiceB: "Corona",
+        choiceC: "Blue Moon",
+        choiceD: "Coors Light",
+        answer:1
+    },
+    {
+        question: "What was the car of choice for Dom",
+        choiceA: "Dodge Charger",
+        choiceB: "Mustang gt350",
+        choiceC: "Toyota Supra",
+        choiceD: "Honda civi Si",
+        answer:0
+    },
+    {
+        question: "What is Brian's true profession?.",
+        choiceA: "chef",
+        choiceB: "accountant",
+        choiceC: "cop",
+        choiceD: "mechanic",
+        answer:2
+    }, 
+       
+
+];
+
 let startBtn = document.getElementById("start");
+
+let startText = document.querySelectorAll("note");
 //  let startQuiz=document.getElementById("start quiz");
-let questionElement = document.getElementById("questions");
 
-let choice0 = document.getElementById("choiceA");
-let choice1 = document.getElementById("choiceB");
-let choice2 = document.getElementById("choiceC");
-let choice3 = document.getElementById("choiceD");
-
-let timer = document.getElementById("countdown");
+// let choice0 = document.getElementById("choiceA");
+// let choice1 = document.getElementById("choiceB");
+// let choice2 = document.getElementById("choiceC");
+// let choice3 = document.getElementById("choiceD");
+// let timer = document.getElementById("countdown");
 
 //startQuiz.addEventListener("click", start);
-
 
 // startBtn.addEventListener("click", function(event){console.log(event)});
 startBtn.addEventListener("click", startQuiz);
 function startQuiz() {
     console.log("see if start works");
     startBtn.classList.add("hide")
+    var x = document.getElementById("note");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
 }
 
-// We start the game with a score of 0
-let score = 0;
-// question[0].questions
-// question[0].choiceA
-// question[0].choiceB
-// question[0].choiceC
-// question[0].choiceA 
-// question[0].correct 
+let questionElement = document.getElementById("questions");
+console.log(questionElement);
 
-//console.log("started")
-//array for all questions
-let questions = [
-    {
-        question: " Who said, Ask any racer, any real racer,it doesn't matter if you win by an inch or a mile, winning is winning?",
-        a:[3],
-        choiceA: "Vince",
-        choiceB: "Leon",
-        choiceC: "Hector",
-        choiceD: "Dom"
-    },
-    {
-        question: "Who drove the orange lamborghini mercielago on the ice?",
-        a:[3],
-        choiceA: "The Rock",
-        choiceB: "Jason Statham",
-        choiceC: "VIn Disel",
-        choiceD: "Tyrese"
-    },
-    {
-        question: "What is the beer of choice in the movie?",
-        a:[1],
-        choiceA: "Budweiser",
-        choiceB: "Corona",
-        choiceC: "Blue Moon",
-        choiceD: "Coors Light"
-    },
-    {
-        question: "What was the car of choice for Dom",
-        a:[0],
-        choiceA: "Dodge Charger",
-        choiceB: "Mustang gt350",
-        choiceC: "Toyota Supra",
-        choiceD: "Honda civi Si"
-    },
-    {
-        question: "What is Brian's true profession?.",
-        a:[2],
-        choiceA: "chef",
-        choiceB: "accountant",
-        choiceC: "cop",
-        choiceD: "mechanic"
-    },
+startBtn.addEventListener("click", startClickHandler);
 
-];
-//display question on container
-function showQuestion() {
-    questionElement.innerText = question.question
+function startClickHandler(event) {
+    console.log(event.target);
+    displayNextQuestions();
 }
 
-
-
-// //loop each question
-// for (let i = 0; i < questions.length; i++) {
-//     let response = (questions[i].q);
-//     if (response == questions[i].answer) { }
-// }
-// // Compare answers
-// if ((response === true && questions[i].a === "t") ||
-//     (response === false && questions[i].a === "t")) {
-//     // Increase score
-//     score++;
-//     alert("Correct!");
-// }
-// else {
-//     alert("Wrong!");
-// }
-
-let var1 = [];
-let var2 = JSON.parse(localStorage.getItem("score"));
-if (var2 !== null) {
-    var1 = var2;
+//make a function for questions to be shown
+let questionIndex = 0;
+function displayNextQuestions() {
+    let currentQuestion = questions[questionIndex];
 }
-localStorage.setItem("questions", score);
-console.log(localStorage);
+
+let questionDiv = document.createElement('div');
+questionDiv.textContent = currentQuestion.question;
+
+let choiceADiv = document.createElement('div');
+choiceADiv.textContent = currentQuestion.choiceA;
+
+let choiceBDiv = document.createElement('div');
+choiceBDiv.textContent = currentQuestion.choiceB;
+
+let choiceCDiv = document.createElement('div');
+choiceCDiv.textContent = currentQuestion.choiceC;
+
+let choiceDDiv = document.createElement('div');
+choiceDDiv.textContent = currentQuestion.choiceD;
+
+let answerDiv = document.createElement('div');
+answerDiv.textContent = currentQuestion.answer;
+
+
+
+
+
+
+// function displayNextQuestions(){
+
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // We start the game with a score of 0
+// let score = 0;
+// // question[0].questions
+// // question[0].choiceA
+// // question[0].choiceB
+// // question[0].choiceC
+// // question[0].choiceA 
+// // question[0].correct 
+
+// //console.log("started")
+// //array for all questions
+
+// //display question on container
+// function showQuestion() {
+//     questionElement.innerText = question.question
+// }
+
+
+
+// // //loop each question
+// // for (let i = 0; i < questions.length; i++) {
+// //     let response = (questions[i].q);
+// //     if (response == questions[i].answer) { }
+// // }
+// // // Compare answers
+// // if ((response === true && questions[i].a === "t") ||
+// //     (response === false && questions[i].a === "t")) {
+// //     // Increase score
+// //     score++;
+// //     alert("Correct!");
+// // }
+// // else {
+// //     alert("Wrong!");
+// // }
+
+// let var1 = [];
+// let var2 = JSON.parse(localStorage.getItem("score"));
+// if (var2 !== null) {
+//     var1 = var2;
+// }
+// localStorage.setItem("questions", score);
+// console.log(localStorage);
 
