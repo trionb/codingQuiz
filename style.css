@@ -33,6 +33,13 @@ h1  {
     text-align: center;
     
 }
+div{
+    margin-bottom:50px ;
+    text-indent: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 5px;
+    padding-bottom: 70px;
+}
 p{
     font-family: 'Times New Roman', Times, serif;
     font-size: 15px;
@@ -63,10 +70,22 @@ p{
 .center-btn {
     text-align: center;
 }
+button{
+    display: inline;
+    grid-template-columns: repeat(2,auto);
+    gap: 30px;    
+    margin: 10px;
+    background-color: white;
+    height:30px;
+    width: 150px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 auto; 
+}
 button#nextbtn {
     float: right;
-    margin-bottom: 150px;
-    background-color: black;
+    margin-top: 70px;
+    background-color: teal;
     color: white;
     height: 30px;
     width:100px ;
@@ -79,7 +98,7 @@ button#nextbtn {
     gap: 30px;    
     margin: 10px;
 }
- #A{
+ /* #A{
    background-color: white;
    height:30px;
    width: 150px;
@@ -110,7 +129,7 @@ button#nextbtn {
      cursor: pointer;
      display: block;
      margin: 0 auto;
- } 
+ }  */
 
 .viewHighlights {
     float: left;
