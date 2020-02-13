@@ -63,6 +63,16 @@ p{
 .center-btn {
     text-align: center;
 }
+button#nextbtn {
+    float: right;
+    margin-bottom: 150px;
+    background-color: black;
+    color: white;
+    height: 30px;
+    width:100px ;
+    border-radius: 10px;
+    display: inline-block;
+}
 .btn-grid{
     display: grid;
     grid-template-columns: repeat(2, auto);
@@ -110,7 +120,7 @@ p{
     float: right;
 }
 
-.question {
+.questions {
     padding: 20px 10px 20px 10px;
     clear: both;
 }
