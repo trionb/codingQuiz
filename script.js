@@ -6,11 +6,6 @@ let startText = document.getElementById("note");
 let nextElement = document.getElementById("nextbtn")
 //  let startQuiz=document.getElementById("start quiz");
 
-// let choice0 = document.getElementById("choiceA");
-// let choice1 = document.getElementById("choiceB");
-// let choice2 = document.getElementById("choiceC");
-// let choice3 = document.getElementById("choiceD");
-
 
 //startQuiz.addEventListener("click", start);
 
@@ -87,9 +82,6 @@ function startClickHandler(event) {
         },
     ];
 
-                for( let i = 0; i< questions.length; questions);
-
-
     let questionIndex = 0;
 
     function displayNextQuestions() {
@@ -111,6 +103,7 @@ function startClickHandler(event) {
         let choiceDDiv = document.createElement('button');
         choiceDDiv.textContent = currentQuestion.choiceD;
 
+        // this displays answer in context, 
         // let answerDiv = document.createElement('div');
         // answerDiv.textContent = currentQuestion.answer;
 
@@ -163,7 +156,10 @@ function startClickHandler(event) {
                 x.style.display = "none";
             }
         }
-
+        
+        for( let questionIndex = 0; questionIndex <= questions.length; questionIndex++){
+            displayNextQuestions.innerHTML
+        }
     }
     displayNextQuestions()
 
@@ -172,19 +168,26 @@ function startClickHandler(event) {
         var timerInterval = setInterval(function () {
             (timer--)
             timerElement.textContent = "0:" + timer;
+            if (timeLeft === 0) {
+                timerEl.textContent = "";
+                startTimer();
+                clearInterval(timeInterval);
+              }
+
         }, 1000);
-        //if(timerInterval === stopTimer)
-
-        // if ( minutes=== 0 && seconds === 0) {
-        //     clearInterval(timerInterval);
-        //     callback && callback();
-
+        
     }
 
     startTimer();
 }
 
 
+    // set new submission
+    localStorage.setItem("questions", JSON.stringify(questions));
+    
+    // get most recent submission
+    var viewHighlights = JSON.parse(localStorage.getItem("questions"));
+    
 
 
 
@@ -196,51 +199,3 @@ function startClickHandler(event) {
 
 
 
-
-
-
-
-
-
-// // We start the game with a score of 0
-// let score = 0;
-// // question[0].questions
-// // question[0].choiceA
-// // question[0].choiceB
-// // question[0].choiceC
-// // question[0].choiceA 
-// // question[0].correct 
-
-// //console.log("started")
-// //array for all questions
-
-// //display question on container
-// function showQuestion() {
-//     questionElement.innerText = question.question
-// }
-
-
-
-// // //loop each question
-// // for (let i = 0; i < questions.length; i++) {
-// //     let response = (questions[i].q);
-// //     if (response == questions[i].answer) { }
-// // }
-// // // Compare answers
-// // if ((response === true && questions[i].a === "t") ||
-// //     (response === false && questions[i].a === "t")) {
-// //     // Increase score
-// //     score++;
-// //     alert("Correct!");
-// // }
-// // else {
-// //     alert("Wrong!");
-// // }
-
-// let var1 = [];
-// let var2 = JSON.parse(localStorage.getItem("score"));
-// if (var2 !== null) {
-//     var1 = var2;
-// }
-// localStorage.setItem("questions", score);
-// console.log(localStorage);
